@@ -2,9 +2,13 @@ import requests
 import json
 import time
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
-api_key = "-"
-acces_token = '-'
+load_dotenv()
+
+api_key = os.getenv('OPENAI_KEY')
+acces_token = os.getenv('ACCES_TOKEN')
 client = OpenAI(api_key=api_key)
 
 headers = {

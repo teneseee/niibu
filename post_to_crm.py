@@ -1,10 +1,14 @@
 import csv
 import requests
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 csv_file = 'deals.csv'
 
-access_token = "-"
+access_token = os.getenv('ACCES_TOKEN')
 url_leads = "https://www.zohoapis.eu/crm/v2/Leads"
 url_deals = "https://www.zohoapis.eu/crm/v2/Deals"
 

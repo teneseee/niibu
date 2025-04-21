@@ -5,10 +5,15 @@ from openai import OpenAI
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
+import os
+from dotenv import load_dotenv
 
-file_id = "-" #ид из ссылки на файл гугл дриве
+load_dotenv()
+
+
+file_id = os.getenv('GD_FILE_ID')
 credentials = "credentials.json"
-openai_key = "-"
+openai_key = os.getenv('OPENAI_KEY')
 
 client = OpenAI(api_key=openai_key)
 

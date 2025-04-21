@@ -1,0 +1,6 @@
+requests
+openai
+python-dotenv
+PyMuPDF
+google-api-python-client
+google-auth
